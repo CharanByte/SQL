@@ -1,0 +1,110 @@
+mysql> update stu set grsde='DESTENCTION' where per>90 and per<101;
+ERROR 1054 (42S22): Unknown column 'grsde' in 'field list'
+mysql> update stu set grade='DESTENCTION' where per>90 and per<101;
+Query OK, 4 rows affected (0.01 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+mysql> select *from stu;
++------+--------+------+-------------+
+| stid | stname | per  | grade       |
++------+--------+------+-------------+
+|  101 | cha    |   92 | DESTENCTION |
+|  102 | charan |  100 | DESTENCTION |
+|  103 | raj    |  100 | DESTENCTION |
+|  104 | ram    |   89 | DESC        |
+|  105 | raju   |   99 | DESTENCTION |
+|  106 | q      |   59 | PASS        |
+|  107 | w      |   77 | FIRST CLASS |
+|  108 | e      |   85 | DESC        |
++------+--------+------+-------------+
+8 rows in set (0.00 sec)
+
+mysql> update stu set stname='rock' where stid=101;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select *from stu;
++------+--------+------+-------------+
+| stid | stname | per  | grade       |
++------+--------+------+-------------+
+|  101 | rock   |   92 | DESTENCTION |
+|  102 | charan |  100 | DESTENCTION |
+|  103 | raj    |  100 | DESTENCTION |
+|  104 | ram    |   89 | DESC        |
+|  105 | raju   |   99 | DESTENCTION |
+|  106 | q      |   59 | PASS        |
+|  107 | w      |   77 | FIRST CLASS |
+|  108 | e      |   85 | DESC        |
++------+--------+------+-------------+
+8 rows in set (0.00 sec)
+
+
+********************************************************************************************************************
+mysql> dsec shopdetials;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'dsec shopdetials' at line 1
+mysql> desc shopdetials;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| shopname  | varchar(20) | YES  |     | NULL    |       |
+| ownername | varchar(30) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql> select * from shopdetials;
+Empty set (0.00 sec)
+
+mysql> delete from shopdetials;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> desc shopdetials;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| shopname  | varchar(20) | YES  |     | NULL    |       |
+| ownername | varchar(30) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql> insert into shopdetials values('wines','raju');
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select *from shopdetials;
++----------+-----------+
+| shopname | ownername |
++----------+-----------+
+| wines    | raju      |
++----------+-----------+
+1 row in set (0.00 sec)
+
+mysql> desc shopdetials;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| shopname  | varchar(20) | YES  |     | NULL    |       |
+| ownername | varchar(30) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
+
+mysql> select *from shopdetials;
++----------+-----------+
+| shopname | ownername |
++----------+-----------+
+| wines    | raju      |
++----------+-----------+
+1 row in set (0.00 sec)
+
+mysql> delete from shopdetials;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from shopdetials;
+Empty set (0.00 sec)
+
+mysql> desc shopdetials;
++-----------+-------------+------+-----+---------+-------+
+| Field     | Type        | Null | Key | Default | Extra |
++-----------+-------------+------+-----+---------+-------+
+| shopname  | varchar(20) | YES  |     | NULL    |       |
+| ownername | varchar(30) | YES  |     | NULL    |       |
++-----------+-------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
