@@ -1,0 +1,94 @@
+mysql> select *  from stu;
++------+--------+------+-------------+
+| stid | stname | per  | grade       |
++------+--------+------+-------------+
+|  101 | rock   |   92 | DESTENCTION |
+|  102 | charan |  100 | DESTENCTION |
+|  103 | raj    |  100 | DESTENCTION |
+|  104 | ram    |   89 | DESC        |
+|  105 | raju   |   99 | DESTENCTION |
+|  106 | q      |   59 | PASS        |
+|  107 | w      |   77 | FIRST CLASS |
+|  108 | e      |   85 | DESC        |
++------+--------+------+-------------+
+8 rows in set (0.00 sec)
+
+mysql> select count(stid) from stu;
++-------------+
+| count(stid) |
++-------------+
+|           8 |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> select count(per) from stu;
++------------+
+| count(per) |
++------------+
+|          8 |
++------------+
+1 row in set (0.00 sec)
+
+mysql> select count(distinct per) from stu;
++---------------------+
+| count(distinct per) |
++---------------------+
+|                   7 |
++---------------------+
+1 row in set (0.00 sec)
+
+mysql> select count(distinct grade) from stu;
++-----------------------+
+| count(distinct grade) |
++-----------------------+
+|                     4 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select count(distinct grade) from stu;
++-----------------------+
+| count(distinct grade) |
++-----------------------+
+|                     4 |
++-----------------------+
+1 row in set (0.00 sec)
+
+mysql> select sum(per) from stu;
++----------+
+| sum(per) |
++----------+
+|      701 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select sum(grade) from stu;
++------------+
+| sum(grade) |
++------------+
+|          0 |
++------------+
+1 row in set, 8 warnings (0.01 sec)
+
+mysql> select avg(per) from stu;
++----------+
+| avg(per) |
++----------+
+|   87.625 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select max(per) from stu;
++----------+
+| max(per) |
++----------+
+|      100 |
++----------+
+1 row in set (0.02 sec)
+
+mysql> select min(per) from stu;
++----------+
+| min(per) |
++----------+
+|       59 |
++----------+
+1 row in set (0.00 sec)
